@@ -1,0 +1,2847 @@
+{
+  "case_id": "DEMO-2026",
+  "generated": "2026-05-31T01:21:16.176700Z",
+  "collector": "ForensicKit 1.0.0",
+  "host": "vm",
+  "evidence": [
+    {
+      "category": "System",
+      "title": "System Information",
+      "source": "OS APIs / uname / systeminfo",
+      "timestamp": "2026-05-31T01:21:14.591473Z",
+      "data": {
+        "hostname": "vm",
+        "fqdn": "localhost",
+        "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+        "system": "Linux",
+        "release": "6.18.5",
+        "version": "#2 SMP PREEMPT_DYNAMIC Wed Jan 14 17:56:08 UTC 2026",
+        "machine": "x86_64",
+        "processor": "x86_64",
+        "python_version": "3.12.3",
+        "collection_time": "2026-05-31T01:21:14.583703Z",
+        "boot_time": "2026-05-31T01:16:15",
+        "cpu_count_logical": 1,
+        "cpu_count_physical": 1,
+        "memory_total_gb": 3.91,
+        "memory_used_pct": 9.1,
+        "uname": "Linux vm 6.18.5 #2 SMP PREEMPT_DYNAMIC Wed Jan 14 17:56:08 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux",
+        "timezone": "Etc/UTC",
+        "os_release": "PRETTY_NAME=\"Ubuntu 24.04.4 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.4 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n"
+      },
+      "raw": ""
+    },
+    {
+      "category": "Processes",
+      "title": "Running Processes",
+      "source": "psutil / ps / tasklist",
+      "timestamp": "2026-05-31T01:21:14.609337Z",
+      "data": [
+        {
+          "memory_percent": 0.13817316727833012,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 1,
+          "exe": "/process_api",
+          "cpu_percent": 0.0,
+          "name": "process_api",
+          "cmdline": "/process_api --firecracker-init --addr 0.0.0.0:2024 --max-ws-buffer-size 32768 --block-local-connections",
+          "username": "root",
+          "connections": [
+            {
+              "fd": 10,
+              "type": "1",
+              "laddr": "0.0.0.0:2025",
+              "raddr": "",
+              "status": "LISTEN"
+            },
+            {
+              "fd": 11,
+              "type": "1",
+              "laddr": "192.0.2.2:2024",
+              "raddr": "192.0.2.1:48408",
+              "status": "ESTABLISHED"
+            },
+            {
+              "fd": 9,
+              "type": "1",
+              "laddr": "0.0.0.0:2024",
+              "raddr": "",
+              "status": "LISTEN"
+            }
+          ]
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 2,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kthreadd",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 3,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "pool_workqueue_release",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 4,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-rcu_gp",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 5,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-sync_wq",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 6,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-kvfree_rcu_reclaim",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 7,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-slub_flushwq",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 8,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-netns",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 9,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/0:0-pm",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 10,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/0:0H-events_highpri",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 11,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/0:1-virtio-blk",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 12,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/u4:0-events_unbound",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:30.640000",
+          "pid": 13,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-mm_percpu_wq",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:30.650000",
+          "pid": 14,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "ksoftirqd/0",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:30.650000",
+          "pid": 15,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "rcu_preempt",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:30.650000",
+          "pid": 16,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "rcu_exp_par_gp_kthread_worker/0",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:30.650000",
+          "pid": 17,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "rcu_exp_gp_kthread_worker",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:30.650000",
+          "pid": 18,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "migration/0",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:30.650000",
+          "pid": 19,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "cpuhp/0",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:32.660000",
+          "pid": 21,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/u4:1-flush-254:0",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:34.550000",
+          "pid": 22,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kdevtmpfs",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.550000",
+          "pid": 23,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-inet_frag_wq",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.550000",
+          "pid": 24,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "rcu_tasks_kthread",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.550000",
+          "pid": 25,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "rcu_tasks_trace_kthread",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:34.560000",
+          "pid": 26,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kauditd",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:34.580000",
+          "pid": 27,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "khungtaskd",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:34.580000",
+          "pid": 28,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "oom_reaper",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.580000",
+          "pid": 29,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-writeback",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:34.580000",
+          "pid": 30,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kcompactd0",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:34.590000",
+          "pid": 31,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "ksmd",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:34.590000",
+          "pid": 32,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "khugepaged",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.590000",
+          "pid": 33,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-kblockd",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.590000",
+          "pid": 34,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-kintegrityd",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:34.700000",
+          "pid": 35,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "watchdogd",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.710000",
+          "pid": 36,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-quota_events_unbound",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.750000",
+          "pid": 37,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-rpciod",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.750000",
+          "pid": 38,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/0:1H-kblockd",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.750000",
+          "pid": 39,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-xprtiod",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:34.830000",
+          "pid": 46,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kswapd0",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.840000",
+          "pid": 59,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-nfsiod",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.860000",
+          "pid": 63,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-xfsalloc",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.860000",
+          "pid": 65,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-xfs_mru_cache",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.880000",
+          "pid": 66,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-kthrotld",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:34.880000",
+          "pid": 68,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "irq/24-ACPI:Ged",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:34.880000",
+          "pid": 70,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "irq/25-ACPI:Ged",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.910000",
+          "pid": 84,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/u4:2-events_unbound",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:34.920000",
+          "pid": 115,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "hwrng",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.970000",
+          "pid": 145,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-iscsi_conn_cleanup",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:34.990000",
+          "pid": 175,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-kstrp",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:35.020000",
+          "pid": 477,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/u5:0",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:36.390000",
+          "pid": 485,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/0:2",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.0,
+          "status": "idle",
+          "create_time": "2026-05-31T01:16:36.440000",
+          "pid": 488,
+          "exe": "",
+          "cpu_percent": 0.0,
+          "name": "kworker/R-ext4-rsv-conversion",
+          "cmdline": [],
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.8430905122067601,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:16:36.540000",
+          "pid": 490,
+          "exe": "/opt/rclone/rclone-filestore",
+          "cpu_percent": 0.0,
+          "name": "rclone-filestore",
+          "cmdline": "/opt/rclone/rclone-filestore multimount --config /tmp/rclone-mount-config.json",
+          "username": "root",
+          "connections": [
+            {
+              "fd": 9,
+              "type": "1",
+              "laddr": "192.0.2.2:38442",
+              "raddr": "160.79.104.10:443",
+              "status": "ESTABLISHED"
+            },
+            {
+              "fd": 8,
+              "type": "1",
+              "laddr": "192.0.2.2:38430",
+              "raddr": "160.79.104.10:443",
+              "status": "ESTABLISHED"
+            },
+            {
+              "fd": 11,
+              "type": "1",
+              "laddr": "192.0.2.2:38452",
+              "raddr": "160.79.104.10:443",
+              "status": "ESTABLISHED"
+            }
+          ]
+        },
+        {
+          "memory_percent": 0.04654562202808155,
+          "status": "sleeping",
+          "create_time": "2026-05-31T01:21:13.600000",
+          "pid": 745,
+          "exe": "/usr/bin/dash",
+          "cpu_percent": 0.0,
+          "name": "sh",
+          "cmdline": "/bin/sh -c cd /home/claude/forensic_toolkit && python forensic_collector.py -v -o reports --case-id DEMO-2026 -r 2 2>&1",
+          "username": "root",
+          "connections": []
+        },
+        {
+          "memory_percent": 0.5384460007357526,
+          "status": "running",
+          "create_time": "2026-05-31T01:21:13.600000",
+          "pid": 746,
+          "exe": "/usr/bin/python3.12",
+          "cpu_percent": 0.0,
+          "name": "python",
+          "cmdline": "python forensic_collector.py -v -o reports --case-id DEMO-2026 -r 2",
+          "username": "root",
+          "connections": []
+        }
+      ],
+      "raw": ""
+    },
+    {
+      "category": "Network",
+      "title": "Active Network Connections",
+      "source": "psutil / ss / netstat",
+      "timestamp": "2026-05-31T01:21:14.610815Z",
+      "data": {
+        "connections": [
+          {
+            "fd": 9,
+            "family": "2",
+            "type": "1",
+            "laddr": "192.0.2.2:38442",
+            "raddr": "160.79.104.10:443",
+            "status": "ESTABLISHED",
+            "pid": 490
+          },
+          {
+            "fd": -1,
+            "family": "2",
+            "type": "1",
+            "laddr": "192.0.2.2:2024",
+            "raddr": "192.0.2.1:52250",
+            "status": "TIME_WAIT",
+            "pid": null
+          },
+          {
+            "fd": 11,
+            "family": "2",
+            "type": "1",
+            "laddr": "192.0.2.2:2024",
+            "raddr": "192.0.2.1:48408",
+            "status": "ESTABLISHED",
+            "pid": 1
+          },
+          {
+            "fd": -1,
+            "family": "2",
+            "type": "1",
+            "laddr": "192.0.2.2:2024",
+            "raddr": "192.0.2.1:47270",
+            "status": "TIME_WAIT",
+            "pid": null
+          },
+          {
+            "fd": -1,
+            "family": "2",
+            "type": "1",
+            "laddr": "192.0.2.2:2024",
+            "raddr": "192.0.2.1:39084",
+            "status": "TIME_WAIT",
+            "pid": null
+          },
+          {
+            "fd": -1,
+            "family": "2",
+            "type": "1",
+            "laddr": "192.0.2.2:2024",
+            "raddr": "192.0.2.1:54480",
+            "status": "TIME_WAIT",
+            "pid": null
+          },
+          {
+            "fd": 10,
+            "family": "2",
+            "type": "1",
+            "laddr": "0.0.0.0:2025",
+            "raddr": "",
+            "status": "LISTEN",
+            "pid": 1
+          },
+          {
+            "fd": 9,
+            "family": "2",
+            "type": "1",
+            "laddr": "0.0.0.0:2024",
+            "raddr": "",
+            "status": "LISTEN",
+            "pid": 1
+          },
+          {
+            "fd": -1,
+            "family": "2",
+            "type": "1",
+            "laddr": "192.0.2.2:2024",
+            "raddr": "192.0.2.1:60528",
+            "status": "TIME_WAIT",
+            "pid": null
+          },
+          {
+            "fd": -1,
+            "family": "2",
+            "type": "1",
+            "laddr": "192.0.2.2:2024",
+            "raddr": "192.0.2.1:45380",
+            "status": "TIME_WAIT",
+            "pid": null
+          },
+          {
+            "fd": 8,
+            "family": "2",
+            "type": "1",
+            "laddr": "192.0.2.2:38430",
+            "raddr": "160.79.104.10:443",
+            "status": "ESTABLISHED",
+            "pid": 490
+          },
+          {
+            "fd": 11,
+            "family": "2",
+            "type": "1",
+            "laddr": "192.0.2.2:38452",
+            "raddr": "160.79.104.10:443",
+            "status": "ESTABLISHED",
+            "pid": 490
+          },
+          {
+            "fd": -1,
+            "family": "2",
+            "type": "1",
+            "laddr": "192.0.2.2:2024",
+            "raddr": "192.0.2.1:53932",
+            "status": "TIME_WAIT",
+            "pid": null
+          }
+        ],
+        "interfaces": {
+          "lo": [
+            {
+              "family": "2",
+              "address": "127.0.0.1",
+              "netmask": "255.0.0.0",
+              "broadcast": null
+            },
+            {
+              "family": "17",
+              "address": "00:00:00:00:00:00",
+              "netmask": null,
+              "broadcast": null
+            }
+          ],
+          "eth0": [
+            {
+              "family": "2",
+              "address": "192.0.2.2",
+              "netmask": "255.255.255.0",
+              "broadcast": "192.0.2.255"
+            },
+            {
+              "family": "17",
+              "address": "02:fc:00:00:00:01",
+              "netmask": null,
+              "broadcast": "ff:ff:ff:ff:ff:ff"
+            }
+          ]
+        }
+      },
+      "raw": ""
+    },
+    {
+      "category": "Network",
+      "title": "DNS Cache / Hosts File",
+      "source": "/etc/hosts",
+      "timestamp": "2026-05-31T01:21:14.611451Z",
+      "data": {
+        "hosts_file": "127.0.0.1 localhost\n160.79.104.10 api.anthropic.com\n127.0.0.1 vm\n",
+        "resolvectl_stats": ""
+      },
+      "raw": ""
+    },
+    {
+      "category": "Users",
+      "title": "User Accounts & Sessions",
+      "source": "/etc/passwd / net user",
+      "timestamp": "2026-05-31T01:21:14.614592Z",
+      "data": {
+        "passwd": "root:x:0:0:root:/root:/bin/bash\ndaemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin\nbin:x:2:2:bin:/bin:/usr/sbin/nologin\nsys:x:3:3:sys:/dev:/usr/sbin/nologin\nsync:x:4:65534:sync:/bin:/bin/sync\ngames:x:5:60:games:/usr/games:/usr/sbin/nologin\nman:x:6:12:man:/var/cache/man:/usr/sbin/nologin\nlp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin\nmail:x:8:8:mail:/var/mail:/usr/sbin/nologin\nnews:x:9:9:news:/var/spool/news:/usr/sbin/nologin\nuucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin\nproxy:x:13:13:proxy:/bin:/usr/sbin/nologin\nwww-data:x:33:33:www-data:/var/www:/usr/sbin/nologin\nbackup:x:34:34:backup:/var/backups:/usr/sbin/nologin\nlist:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin\nirc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin\n_apt:x:42:65534::/nonexistent:/usr/sbin/nologin\nnobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin\nubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash\nsystemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin\nmessagebus:x:100:101::/nonexistent:/usr/sbin/nologin\npolkitd:x:997:997:User for polkitd:/:/usr/sbin/nologin\nclaude:x:999:1001::/home/claude:/bin/bash\n",
+        "shadow_accessible": true,
+        "last_logins": "\nwtmp begins Fri Apr 10 02:20:03 2026\n",
+        "currently_logged_in": "",
+        "logged_in_psutil": []
+      },
+      "raw": ""
+    },
+    {
+      "category": "Persistence",
+      "title": "Scheduled Tasks / Cron Jobs",
+      "source": "/etc/crontab / schtasks",
+      "timestamp": "2026-05-31T01:21:14.619919Z",
+      "data": {
+        "/etc/cron.d": {
+          "e2scrub_all": "30 3 * * 0 root test -e /run/systemd/system || SERVICE_MODE=1 /usr/lib/x86_64-linux-gnu/e2fsprogs/e2scrub_all_cron\n10 3 * * * root test -e /run/systemd/system || SERVICE_MODE=1 /sbin/e2scrub_all -A -r\n"
+        },
+        "/etc/cron.daily": {
+          "apt-compat": "#!/bin/sh\n\nset -e\n\n# Systemd systems use a systemd timer unit which is preferable to\n# run. We want to randomize the apt update and unattended-upgrade\n# runs as much as possible to avoid hitting the mirrors all at the\n# same time. The systemd time is better at this than the fixed\n# cron.daily time\nif [ -d /run/systemd/system ]; then\n    exit 0\nfi\n\ncheck_power()\n{\n    # laptop check, on_ac_power returns:\n    #       0 (true)    System is on main power\n    #       1 (false)   System is not on main power\n    #       255 (false) Power status could not be determined\n    # Desktop systems always return 255 it seems\n    if command -v on_ac_power >/dev/null; then\n        if on_ac_power; then\n            :\n        elif [ $? -eq 1 ]; then\n            return 1\n        fi\n    fi\n    return 0\n}\n\n# sleep for a random interval of time (default 30min)\n# (some code taken from cron-apt, thanks)\nrandom_sleep()\n{\n    RandomSleep=1800\n    eval $(apt-config shell RandomSleep APT::Periodic::RandomSleep)\n    if [ $RandomSleep -eq 0 ]; then\n\treturn\n    fi\n    if [ -z \"$RANDOM\" ] ; then\n        # A fix for shells that do not have this bash feature.\n\tRANDOM=$(( $(dd if=/dev/urandom bs=2 count=1 2> /dev/null | cksum | cut -d' ' -f1) % 32767 ))\n    fi\n    TIME=$(($RANDOM % $RandomSleep))\n    sleep $TIME\n}\n\n# delay the job execution by a random amount of time\nrandom_sleep\n\n# ensure we don't do this on battery\ncheck_power || exit 0\n\n# run daily job\nexec /usr/lib/apt/apt.systemd.daily\n",
+          "dpkg": "#!/bin/sh\n\n# Skip if systemd is running.\nif [ -d /run/systemd/system ]; then\n  exit 0\nfi\n\n/usr/libexec/dpkg/dpkg-db-backup\n"
+        },
+        "current_user_crontab": "(empty)",
+        "systemd_timers": ""
+      },
+      "raw": ""
+    },
+    {
+      "category": "Persistence",
+      "title": "Startup / Autorun Items",
+      "source": "systemd / registry / rc.local",
+      "timestamp": "2026-05-31T01:21:14.770293Z",
+      "data": {
+        "systemd_enabled": "UNIT FILE               STATE   PRESET\ne2scrub_reap.service    enabled enabled\ngetty@.service          enabled enabled\nsystemd-pstore.service  enabled enabled\nremote-fs.target        enabled enabled\napt-daily-upgrade.timer enabled enabled\napt-daily.timer         enabled enabled\ndpkg-db-backup.timer    enabled enabled\ne2scrub_all.timer       enabled enabled\nfstrim.timer            enabled enabled\nmotd-news.timer         enabled enabled\n\n10 unit files listed.\n",
+        "init_d_scripts": [
+          "dbus",
+          "procps",
+          "x11-common"
+        ]
+      },
+      "raw": ""
+    },
+    {
+      "category": "Filesystem",
+      "title": "Recently Modified Files (last 2h)",
+      "source": "/",
+      "timestamp": "2026-05-31T01:21:16.168423Z",
+      "data": {
+        "count": 231,
+        "limit": 1000,
+        "cutoff": "2026-05-30T23:21:14.770408",
+        "files": [
+          {
+            "path": "/container_info.json",
+            "size": 76,
+            "mtime": "2026-05-31T01:16:37.489955",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/etc/hosts",
+            "size": 65,
+            "mtime": "2026-05-31T01:16:37.349955",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/etc/resolv.conf",
+            "size": 19,
+            "mtime": "2026-05-31T01:16:37.353955",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/etc/hostname",
+            "size": 3,
+            "mtime": "2026-05-31T01:16:37.349955",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/py.py",
+            "size": 329,
+            "mtime": "2026-05-31T01:20:44.933231",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/__pycache__/py.cpython-312.pyc",
+            "size": 467,
+            "mtime": "2026-05-31T01:20:45.274089",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/_hooks.py",
+            "size": 25218,
+            "mtime": "2026-05-31T01:20:44.884772",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/_warnings.py",
+            "size": 828,
+            "mtime": "2026-05-31T01:20:44.886650",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/_manager.py",
+            "size": 20219,
+            "mtime": "2026-05-31T01:20:44.885518",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/__init__.py",
+            "size": 811,
+            "mtime": "2026-05-31T01:20:44.884131",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/_tracing.py",
+            "size": 2073,
+            "mtime": "2026-05-31T01:20:44.886150",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/_callers.py",
+            "size": 5991,
+            "mtime": "2026-05-31T01:20:44.884384",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/_result.py",
+            "size": 3098,
+            "mtime": "2026-05-31T01:20:44.885908",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/_version.py",
+            "size": 511,
+            "mtime": "2026-05-31T01:20:44.886491",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/py.typed",
+            "size": 0,
+            "mtime": "2026-05-31T01:20:44.886650",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/__pycache__/_version.cpython-312.pyc",
+            "size": 616,
+            "mtime": "2026-05-31T01:20:44.908808",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/__pycache__/_result.cpython-312.pyc",
+            "size": 4118,
+            "mtime": "2026-05-31T01:20:44.906903",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/__pycache__/_warnings.cpython-312.pyc",
+            "size": 1269,
+            "mtime": "2026-05-31T01:20:44.909186",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/__pycache__/__init__.cpython-312.pyc",
+            "size": 831,
+            "mtime": "2026-05-31T01:20:44.889053",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/__pycache__/_hooks.cpython-312.pyc",
+            "size": 27406,
+            "mtime": "2026-05-31T01:20:44.899592",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/__pycache__/_tracing.cpython-312.pyc",
+            "size": 3995,
+            "mtime": "2026-05-31T01:20:44.908082",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/__pycache__/_callers.cpython-312.pyc",
+            "size": 7003,
+            "mtime": "2026-05-31T01:20:44.891614",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy/__pycache__/_manager.cpython-312.pyc",
+            "size": 25604,
+            "mtime": "2026-05-31T01:20:44.905416",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy-1.6.0.dist-info/RECORD",
+            "size": 1530,
+            "mtime": "2026-05-31T01:20:44.914727",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy-1.6.0.dist-info/INSTALLER",
+            "size": 4,
+            "mtime": "2026-05-31T01:20:44.909499",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy-1.6.0.dist-info/METADATA",
+            "size": 4811,
+            "mtime": "2026-05-31T01:20:44.887465",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy-1.6.0.dist-info/top_level.txt",
+            "size": 7,
+            "mtime": "2026-05-31T01:20:44.888066",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy-1.6.0.dist-info/WHEEL",
+            "size": 91,
+            "mtime": "2026-05-31T01:20:44.887659",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pluggy-1.6.0.dist-info/licenses/LICENSE",
+            "size": 1110,
+            "mtime": "2026-05-31T01:20:44.887211",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig/_parse.py",
+            "size": 5223,
+            "mtime": "2026-05-31T01:20:44.919118",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig/__init__.py",
+            "size": 7497,
+            "mtime": "2026-05-31T01:20:44.918589",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig/exceptions.py",
+            "size": 399,
+            "mtime": "2026-05-31T01:20:44.919427",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig/_version.py",
+            "size": 704,
+            "mtime": "2026-05-31T01:20:44.919260",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig/py.typed",
+            "size": 0,
+            "mtime": "2026-05-31T01:20:44.919427",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig/__pycache__/exceptions.cpython-312.pyc",
+            "size": 1170,
+            "mtime": "2026-05-31T01:20:44.925471",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig/__pycache__/_version.cpython-312.pyc",
+            "size": 766,
+            "mtime": "2026-05-31T01:20:44.924886",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig/__pycache__/_parse.cpython-312.pyc",
+            "size": 5551,
+            "mtime": "2026-05-31T01:20:44.924364",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig/__pycache__/__init__.cpython-312.pyc",
+            "size": 10851,
+            "mtime": "2026-05-31T01:20:44.922898",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig-2.3.0.dist-info/RECORD",
+            "size": 1087,
+            "mtime": "2026-05-31T01:20:44.928364",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig-2.3.0.dist-info/INSTALLER",
+            "size": 4,
+            "mtime": "2026-05-31T01:20:44.925748",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig-2.3.0.dist-info/METADATA",
+            "size": 2526,
+            "mtime": "2026-05-31T01:20:44.920211",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig-2.3.0.dist-info/top_level.txt",
+            "size": 10,
+            "mtime": "2026-05-31T01:20:44.920588",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig-2.3.0.dist-info/WHEEL",
+            "size": 91,
+            "mtime": "2026-05-31T01:20:44.920374",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/iniconfig-2.3.0.dist-info/licenses/LICENSE",
+            "size": 1098,
+            "mtime": "2026-05-31T01:20:44.920041",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/terminal.py",
+            "size": 64444,
+            "mtime": "2026-05-31T01:20:44.954753",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/stash.py",
+            "size": 3090,
+            "mtime": "2026-05-31T01:20:44.953678",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/subtests.py",
+            "size": 13241,
+            "mtime": "2026-05-31T01:20:44.954197",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/main.py",
+            "size": 42435,
+            "mtime": "2026-05-31T01:20:44.942813",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/freeze_support.py",
+            "size": 1300,
+            "mtime": "2026-05-31T01:20:44.939120",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/python_api.py",
+            "size": 31707,
+            "mtime": "2026-05-31T01:20:44.948963",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_argcomplete.py",
+            "size": 3776,
+            "mtime": "2026-05-31T01:20:44.933840",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/scope.py",
+            "size": 2738,
+            "mtime": "2026-05-31T01:20:44.952369",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/nodes.py",
+            "size": 26540,
+            "mtime": "2026-05-31T01:20:44.943825",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__init__.py",
+            "size": 391,
+            "mtime": "2026-05-31T01:20:44.933638",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/faulthandler.py",
+            "size": 4250,
+            "mtime": "2026-05-31T01:20:44.937644",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/pastebin.py",
+            "size": 4155,
+            "mtime": "2026-05-31T01:20:44.944981",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/python.py",
+            "size": 68754,
+            "mtime": "2026-05-31T01:20:44.947773",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/junitxml.py",
+            "size": 25522,
+            "mtime": "2026-05-31T01:20:44.940828",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/pytester.py",
+            "size": 62389,
+            "mtime": "2026-05-31T01:20:44.946509",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/warnings.py",
+            "size": 5194,
+            "mtime": "2026-05-31T01:20:44.958810",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/outcomes.py",
+            "size": 10108,
+            "mtime": "2026-05-31T01:20:44.944348",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/unraisableexception.py",
+            "size": 5179,
+            "mtime": "2026-05-31T01:20:44.958100",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/setupplan.py",
+            "size": 1184,
+            "mtime": "2026-05-31T01:20:44.952764",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/runner.py",
+            "size": 19785,
+            "mtime": "2026-05-31T01:20:44.951947",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/legacypath.py",
+            "size": 16588,
+            "mtime": "2026-05-31T01:20:44.941611",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/deprecated.py",
+            "size": 3611,
+            "mtime": "2026-05-31T01:20:44.936772",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/unittest.py",
+            "size": 24485,
+            "mtime": "2026-05-31T01:20:44.957070",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/fixtures.py",
+            "size": 78681,
+            "mtime": "2026-05-31T01:20:44.938183",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/hookspec.py",
+            "size": 43019,
+            "mtime": "2026-05-31T01:20:44.940014",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/tracemalloc.py",
+            "size": 778,
+            "mtime": "2026-05-31T01:20:44.956761",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/monkeypatch.py",
+            "size": 15500,
+            "mtime": "2026-05-31T01:20:44.943502",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/threadexception.py",
+            "size": 4953,
+            "mtime": "2026-05-31T01:20:44.955834",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_version.py",
+            "size": 520,
+            "mtime": "2026-05-31T01:20:44.934119",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/warning_types.py",
+            "size": 4398,
+            "mtime": "2026-05-31T01:20:44.958559",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/doctest.py",
+            "size": 25478,
+            "mtime": "2026-05-31T01:20:44.937205",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/reports.py",
+            "size": 23230,
+            "mtime": "2026-05-31T01:20:44.951297",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/pytester_assertions.py",
+            "size": 2253,
+            "mtime": "2026-05-31T01:20:44.947346",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/tmpdir.py",
+            "size": 12526,
+            "mtime": "2026-05-31T01:20:44.956470",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/terminalprogress.py",
+            "size": 1153,
+            "mtime": "2026-05-31T01:20:44.955646",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/capture.py",
+            "size": 36829,
+            "mtime": "2026-05-31T01:20:44.935600",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/debugging.py",
+            "size": 13947,
+            "mtime": "2026-05-31T01:20:44.936496",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/compat.py",
+            "size": 10254,
+            "mtime": "2026-05-31T01:20:44.936184",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/pathlib.py",
+            "size": 37879,
+            "mtime": "2026-05-31T01:20:44.945413",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/setuponly.py",
+            "size": 3167,
+            "mtime": "2026-05-31T01:20:44.952570",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/logging.py",
+            "size": 35234,
+            "mtime": "2026-05-31T01:20:44.942155",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/py.typed",
+            "size": 0,
+            "mtime": "2026-05-31T01:20:44.945413",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/helpconfig.py",
+            "size": 10019,
+            "mtime": "2026-05-31T01:20:44.939369",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/skipping.py",
+            "size": 10810,
+            "mtime": "2026-05-31T01:20:44.953374",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/cacheprovider.py",
+            "size": 23149,
+            "mtime": "2026-05-31T01:20:44.934780",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/timing.py",
+            "size": 3108,
+            "mtime": "2026-05-31T01:20:44.956109",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/stepwise.py",
+            "size": 7689,
+            "mtime": "2026-05-31T01:20:44.953896",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/raises.py",
+            "size": 60082,
+            "mtime": "2026-05-31T01:20:44.949682",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/recwarn.py",
+            "size": 13386,
+            "mtime": "2026-05-31T01:20:44.950719",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/mark/__init__.py",
+            "size": 9870,
+            "mtime": "2026-05-31T01:20:44.969918",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/mark/expression.py",
+            "size": 11244,
+            "mtime": "2026-05-31T01:20:44.970381",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/mark/structures.py",
+            "size": 23073,
+            "mtime": "2026-05-31T01:20:44.970731",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/mark/__pycache__/expression.cpython-312.pyc",
+            "size": 17333,
+            "mtime": "2026-05-31T01:20:45.159042",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/mark/__pycache__/structures.cpython-312.pyc",
+            "size": 27469,
+            "mtime": "2026-05-31T01:20:45.163531",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/mark/__pycache__/__init__.cpython-312.pyc",
+            "size": 13049,
+            "mtime": "2026-05-31T01:20:45.155620",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/config/__init__.py",
+            "size": 79300,
+            "mtime": "2026-05-31T01:20:44.966474",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/config/findpaths.py",
+            "size": 12878,
+            "mtime": "2026-05-31T01:20:44.969392",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/config/exceptions.py",
+            "size": 315,
+            "mtime": "2026-05-31T01:20:44.969069",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/config/argparsing.py",
+            "size": 20439,
+            "mtime": "2026-05-31T01:20:44.967950",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/config/compat.py",
+            "size": 2947,
+            "mtime": "2026-05-31T01:20:44.968717",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/config/__pycache__/argparsing.cpython-312.pyc",
+            "size": 26388,
+            "mtime": "2026-05-31T01:20:45.097762",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/config/__pycache__/exceptions.cpython-312.pyc",
+            "size": 788,
+            "mtime": "2026-05-31T01:20:45.099146",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/config/__pycache__/findpaths.cpython-312.pyc",
+            "size": 13236,
+            "mtime": "2026-05-31T01:20:45.101835",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/config/__pycache__/compat.cpython-312.pyc",
+            "size": 3558,
+            "mtime": "2026-05-31T01:20:45.098801",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/config/__pycache__/__init__.cpython-312.pyc",
+            "size": 92100,
+            "mtime": "2026-05-31T01:20:45.093316",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_io/__init__.py",
+            "size": 190,
+            "mtime": "2026-05-31T01:20:44.961188",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_io/wcwidth.py",
+            "size": 1289,
+            "mtime": "2026-05-31T01:20:44.962496",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_io/terminalwriter.py",
+            "size": 8994,
+            "mtime": "2026-05-31T01:20:44.962249",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_io/pprint.py",
+            "size": 19622,
+            "mtime": "2026-05-31T01:20:44.961437",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_io/saferepr.py",
+            "size": 4082,
+            "mtime": "2026-05-31T01:20:44.961844",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_io/__pycache__/saferepr.cpython-312.pyc",
+            "size": 5798,
+            "mtime": "2026-05-31T01:20:45.020953",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_io/__pycache__/wcwidth.cpython-312.pyc",
+            "size": 1663,
+            "mtime": "2026-05-31T01:20:45.024542",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_io/__pycache__/__init__.cpython-312.pyc",
+            "size": 352,
+            "mtime": "2026-05-31T01:20:45.014171",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_io/__pycache__/terminalwriter.cpython-312.pyc",
+            "size": 11221,
+            "mtime": "2026-05-31T01:20:45.023870",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_io/__pycache__/pprint.cpython-312.pyc",
+            "size": 24407,
+            "mtime": "2026-05-31T01:20:45.019519",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/assertion/__init__.py",
+            "size": 7120,
+            "mtime": "2026-05-31T01:20:44.963942",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/assertion/truncate.py",
+            "size": 5438,
+            "mtime": "2026-05-31T01:20:44.964963",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/assertion/util.py",
+            "size": 20561,
+            "mtime": "2026-05-31T01:20:44.965316",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/assertion/rewrite.py",
+            "size": 48206,
+            "mtime": "2026-05-31T01:20:44.964366",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/assertion/__pycache__/truncate.cpython-312.pyc",
+            "size": 4169,
+            "mtime": "2026-05-31T01:20:45.054398",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/assertion/__pycache__/rewrite.cpython-312.pyc",
+            "size": 61272,
+            "mtime": "2026-05-31T01:20:45.052902",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/assertion/__pycache__/__init__.cpython-312.pyc",
+            "size": 10093,
+            "mtime": "2026-05-31T01:20:45.042856",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/assertion/__pycache__/util.cpython-312.pyc",
+            "size": 23823,
+            "mtime": "2026-05-31T01:20:45.058805",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_code/__init__.py",
+            "size": 521,
+            "mtime": "2026-05-31T01:20:44.959105",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_code/source.py",
+            "size": 7772,
+            "mtime": "2026-05-31T01:20:44.960711",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_code/code.py",
+            "size": 56126,
+            "mtime": "2026-05-31T01:20:44.959824",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_code/__pycache__/source.cpython-312.pyc",
+            "size": 11921,
+            "mtime": "2026-05-31T01:20:45.013495",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_code/__pycache__/__init__.cpython-312.pyc",
+            "size": 661,
+            "mtime": "2026-05-31T01:20:44.976476",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_code/__pycache__/code.cpython-312.pyc",
+            "size": 68015,
+            "mtime": "2026-05-31T01:20:45.010656",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/fixtures.cpython-312.pyc",
+            "size": 82865,
+            "mtime": "2026-05-31T01:20:45.124678",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/freeze_support.cpython-312.pyc",
+            "size": 1808,
+            "mtime": "2026-05-31T01:20:45.125878",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/debugging.cpython-312.pyc",
+            "size": 18263,
+            "mtime": "2026-05-31T01:20:45.104867",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/cacheprovider.cpython-312.pyc",
+            "size": 31666,
+            "mtime": "2026-05-31T01:20:45.063519",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/junitxml.cpython-312.pyc",
+            "size": 33322,
+            "mtime": "2026-05-31T01:20:45.136591",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/threadexception.cpython-312.pyc",
+            "size": 5728,
+            "mtime": "2026-05-31T01:20:45.260877",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/helpconfig.cpython-312.pyc",
+            "size": 13128,
+            "mtime": "2026-05-31T01:20:45.127770",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/outcomes.cpython-312.pyc",
+            "size": 11696,
+            "mtime": "2026-05-31T01:20:45.172181",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/legacypath.cpython-312.pyc",
+            "size": 24140,
+            "mtime": "2026-05-31T01:20:45.140082",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/_version.cpython-312.pyc",
+            "size": 610,
+            "mtime": "2026-05-31T01:20:45.041329",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/pytester.cpython-312.pyc",
+            "size": 84985,
+            "mtime": "2026-05-31T01:20:45.192891",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/deprecated.cpython-312.pyc",
+            "size": 3004,
+            "mtime": "2026-05-31T01:20:45.105547",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/tracemalloc.cpython-312.pyc",
+            "size": 961,
+            "mtime": "2026-05-31T01:20:45.264808",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/python_api.cpython-312.pyc",
+            "size": 35230,
+            "mtime": "2026-05-31T01:20:45.210903",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/stepwise.cpython-312.pyc",
+            "size": 9591,
+            "mtime": "2026-05-31T01:20:45.239853",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/_argcomplete.cpython-312.pyc",
+            "size": 4805,
+            "mtime": "2026-05-31T01:20:44.975645",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/scope.cpython-312.pyc",
+            "size": 3546,
+            "mtime": "2026-05-31T01:20:45.232081",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/faulthandler.cpython-312.pyc",
+            "size": 5054,
+            "mtime": "2026-05-31T01:20:45.111514",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/stash.cpython-312.pyc",
+            "size": 4343,
+            "mtime": "2026-05-31T01:20:45.238128",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/subtests.cpython-312.pyc",
+            "size": 17705,
+            "mtime": "2026-05-31T01:20:45.242822",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/compat.cpython-312.pyc",
+            "size": 12985,
+            "mtime": "2026-05-31T01:20:45.073136",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/monkeypatch.cpython-312.pyc",
+            "size": 17189,
+            "mtime": "2026-05-31T01:20:45.166067",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/pytester_assertions.cpython-312.pyc",
+            "size": 2464,
+            "mtime": "2026-05-31T01:20:45.194371",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/doctest.cpython-312.pyc",
+            "size": 32627,
+            "mtime": "2026-05-31T01:20:45.110233",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/terminal.cpython-312.pyc",
+            "size": 84311,
+            "mtime": "2026-05-31T01:20:45.258604",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/warnings.cpython-312.pyc",
+            "size": 6826,
+            "mtime": "2026-05-31T01:20:45.273110",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/nodes.cpython-312.pyc",
+            "size": 30818,
+            "mtime": "2026-05-31T01:20:45.170407",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/logging.cpython-312.pyc",
+            "size": 45945,
+            "mtime": "2026-05-31T01:20:45.146177",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/hookspec.cpython-312.pyc",
+            "size": 45741,
+            "mtime": "2026-05-31T01:20:45.130244",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/timing.cpython-312.pyc",
+            "size": 4762,
+            "mtime": "2026-05-31T01:20:45.262036",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/__init__.cpython-312.pyc",
+            "size": 455,
+            "mtime": "2026-05-31T01:20:44.974723",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/main.cpython-312.pyc",
+            "size": 47316,
+            "mtime": "2026-05-31T01:20:45.153292",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/warning_types.cpython-312.pyc",
+            "size": 6916,
+            "mtime": "2026-05-31T01:20:45.271809",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/raises.cpython-312.pyc",
+            "size": 60013,
+            "mtime": "2026-05-31T01:20:45.219360",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/python.cpython-312.pyc",
+            "size": 75186,
+            "mtime": "2026-05-31T01:20:45.205497",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/setuponly.cpython-312.pyc",
+            "size": 5335,
+            "mtime": "2026-05-31T01:20:45.233189",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/unraisableexception.cpython-312.pyc",
+            "size": 6229,
+            "mtime": "2026-05-31T01:20:45.270793",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/tmpdir.cpython-312.pyc",
+            "size": 13257,
+            "mtime": "2026-05-31T01:20:45.264311",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/terminalprogress.cpython-312.pyc",
+            "size": 1116,
+            "mtime": "2026-05-31T01:20:45.259763",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/pastebin.cpython-312.pyc",
+            "size": 5863,
+            "mtime": "2026-05-31T01:20:45.173494",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/pathlib.cpython-312.pyc",
+            "size": 41783,
+            "mtime": "2026-05-31T01:20:45.180233",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/setupplan.cpython-312.pyc",
+            "size": 1880,
+            "mtime": "2026-05-31T01:20:45.233808",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/reports.cpython-312.pyc",
+            "size": 26979,
+            "mtime": "2026-05-31T01:20:45.226625",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/runner.cpython-312.pyc",
+            "size": 24185,
+            "mtime": "2026-05-31T01:20:45.230638",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/skipping.cpython-312.pyc",
+            "size": 14046,
+            "mtime": "2026-05-31T01:20:45.236646",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/recwarn.cpython-312.pyc",
+            "size": 16076,
+            "mtime": "2026-05-31T01:20:45.222032",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/unittest.cpython-312.pyc",
+            "size": 26504,
+            "mtime": "2026-05-31T01:20:45.269337",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/__pycache__/capture.cpython-312.pyc",
+            "size": 55705,
+            "mtime": "2026-05-31T01:20:45.070826",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_py/path.py",
+            "size": 49229,
+            "mtime": "2026-05-31T01:20:44.963191",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_py/__init__.py",
+            "size": 0,
+            "mtime": "2026-05-31T01:20:44.962496",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_py/error.py",
+            "size": 3475,
+            "mtime": "2026-05-31T01:20:44.962759",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_py/__pycache__/path.cpython-312.pyc",
+            "size": 68845,
+            "mtime": "2026-05-31T01:20:45.040408",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_py/__pycache__/__init__.cpython-312.pyc",
+            "size": 160,
+            "mtime": "2026-05-31T01:20:45.024813",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/_pytest/_py/__pycache__/error.cpython-312.pyc",
+            "size": 4928,
+            "mtime": "2026-05-31T01:20:45.026232",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest/__init__.py",
+            "size": 5582,
+            "mtime": "2026-05-31T01:20:44.971567",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest/__main__.py",
+            "size": 154,
+            "mtime": "2026-05-31T01:20:44.971808",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest/py.typed",
+            "size": 0,
+            "mtime": "2026-05-31T01:20:44.971808",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest/__pycache__/__main__.cpython-312.pyc",
+            "size": 404,
+            "mtime": "2026-05-31T01:20:45.275511",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest/__pycache__/__init__.cpython-312.pyc",
+            "size": 4468,
+            "mtime": "2026-05-31T01:20:45.275120",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest-9.0.3.dist-info/RECORD",
+            "size": 10561,
+            "mtime": "2026-05-31T01:20:45.279722",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest-9.0.3.dist-info/entry_points.txt",
+            "size": 77,
+            "mtime": "2026-05-31T01:20:44.973550",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest-9.0.3.dist-info/REQUESTED",
+            "size": 0,
+            "mtime": "2026-05-31T01:20:45.276465",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest-9.0.3.dist-info/INSTALLER",
+            "size": 4,
+            "mtime": "2026-05-31T01:20:45.276465",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest-9.0.3.dist-info/METADATA",
+            "size": 7556,
+            "mtime": "2026-05-31T01:20:44.972842",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest-9.0.3.dist-info/top_level.txt",
+            "size": 18,
+            "mtime": "2026-05-31T01:20:44.973741",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest-9.0.3.dist-info/WHEEL",
+            "size": 91,
+            "mtime": "2026-05-31T01:20:44.973137",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/lib/python3.12/dist-packages/pytest-9.0.3.dist-info/licenses/LICENSE",
+            "size": 1091,
+            "mtime": "2026-05-31T01:20:44.972381",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/bin/pytest",
+            "size": 221,
+            "mtime": "2026-05-31T01:20:45.276227",
+            "mode": "0o100755",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/usr/local/bin/py.test",
+            "size": 221,
+            "mtime": "2026-05-31T01:20:45.276007",
+            "mode": "0o100755",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/tmp/rclone-mount-config.json",
+            "size": 1612,
+            "mtime": "2026-05-31T01:16:37.937955",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/tmp/rclone-mounts/ready",
+            "size": 0,
+            "mtime": "2026-05-31T01:16:37.921955",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/3/3/9/7/4/33974f84394d9a943f68359da08431dab4af9f86c33962982ea21b5f.body",
+            "size": 6936,
+            "mtime": "2026-05-31T01:20:43.791002",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/3/3/9/7/4/33974f84394d9a943f68359da08431dab4af9f86c33962982ea21b5f",
+            "size": 1833,
+            "mtime": "2026-05-31T01:20:43.787953",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/2/a/5/e/e/2a5ee8829b9737e982606b959f560390acb7a6941fb2438f5758d3ec.body",
+            "size": 2526,
+            "mtime": "2026-05-31T01:20:43.759735",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/2/a/5/e/e/2a5ee8829b9737e982606b959f560390acb7a6941fb2438f5758d3ec",
+            "size": 1256,
+            "mtime": "2026-05-31T01:20:43.756875",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/f/9/9/b/3/f99b3487d2b9c55edcd311aeafa35cbf852ab2cc5c3f5d1a1a08e2b5.body",
+            "size": 4811,
+            "mtime": "2026-05-31T01:20:43.833952",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/f/9/9/b/3/f99b3487d2b9c55edcd311aeafa35cbf852ab2cc5c3f5d1a1a08e2b5",
+            "size": 1254,
+            "mtime": "2026-05-31T01:20:43.832396",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/0/c/b/f/f/0cbfff75291f05c16794a4e2c6c63bcb459c017712a63fb22148cd22.body",
+            "size": 7484,
+            "mtime": "2026-05-31T01:20:43.916672",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/0/c/b/f/f/0cbfff75291f05c16794a4e2c6c63bcb459c017712a63fb22148cd22",
+            "size": 1211,
+            "mtime": "2026-05-31T01:20:43.914117",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/0/c/2/1/8/0c218d526767991766d9b365a4f3e4449ce3579fd8b0f96a707d5a52",
+            "size": 1848,
+            "mtime": "2026-05-31T01:20:43.513581",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/0/c/2/1/8/0c218d526767991766d9b365a4f3e4449ce3579fd8b0f96a707d5a52.body",
+            "size": 46257,
+            "mtime": "2026-05-31T01:20:43.517715",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/0/e/d/3/3/0ed336d749e009fe1267c844e36c442e5b3dc645d5eb9865c545b81a.body",
+            "size": 20538,
+            "mtime": "2026-05-31T01:20:43.945641",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/0/e/d/3/3/0ed336d749e009fe1267c844e36c442e5b3dc645d5eb9865c545b81a",
+            "size": 1209,
+            "mtime": "2026-05-31T01:20:43.943198",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/0/7/5/9/3/07593bb905dded4b84aacb1d96c1e64704669d6bab658dcaeab79c36.body",
+            "size": 2460,
+            "mtime": "2026-05-31T01:20:43.721585",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/0/7/5/9/3/07593bb905dded4b84aacb1d96c1e64704669d6bab658dcaeab79c36",
+            "size": 1833,
+            "mtime": "2026-05-31T01:20:43.718709",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/4/2/1/e/6/421e6a6b7d51e99ff2749a7f9b8d28ec4445a5014e6c82a9ff8c7eb1",
+            "size": 1254,
+            "mtime": "2026-05-31T01:20:43.680660",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/4/2/1/e/6/421e6a6b7d51e99ff2749a7f9b8d28ec4445a5014e6c82a9ff8c7eb1.body",
+            "size": 7556,
+            "mtime": "2026-05-31T01:20:43.683854",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/4/0/e/4/f/40e4f84011de475b66523ed8787778ecb338ae8dc64c39f7ffe2cdf7.body",
+            "size": 375249,
+            "mtime": "2026-05-31T01:20:43.884642",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/.cache/pip/http-v2/4/0/e/4/f/40e4f84011de475b66523ed8787778ecb338ae8dc64c39f7ffe2cdf7",
+            "size": 1241,
+            "mtime": "2026-05-31T01:20:43.881650",
+            "mode": "0o100600",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/forensic_toolkit/forensic_collector.py",
+            "size": 41846,
+            "mtime": "2026-05-31T01:21:03.538100",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/forensic_toolkit/tests/test_forensic_collector.py",
+            "size": 24956,
+            "mtime": "2026-05-31T01:20:34.653952",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/forensic_toolkit/tests/__pycache__/test_forensic_collector.cpython-312-pytest-9.0.3.pyc",
+            "size": 49174,
+            "mtime": "2026-05-31T01:20:45.767749",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/forensic_toolkit/__pycache__/forensic_collector.cpython-312.pyc",
+            "size": 48903,
+            "mtime": "2026-05-31T01:21:05.878135",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/forensic_toolkit/.pytest_cache/CACHEDIR.TAG",
+            "size": 191,
+            "mtime": "2026-05-31T01:20:56.046970",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/forensic_toolkit/.pytest_cache/README.md",
+            "size": 302,
+            "mtime": "2026-05-31T01:20:56.046880",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/forensic_toolkit/.pytest_cache/.gitignore",
+            "size": 37,
+            "mtime": "2026-05-31T01:20:56.046934",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/forensic_toolkit/.pytest_cache/v/cache/lastfailed",
+            "size": 2,
+            "mtime": "2026-05-31T01:21:11.451077",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          },
+          {
+            "path": "/home/claude/forensic_toolkit/.pytest_cache/v/cache/nodeids",
+            "size": 6447,
+            "mtime": "2026-05-31T01:21:11.450710",
+            "mode": "0o100644",
+            "uid": 0,
+            "gid": 0
+          }
+        ]
+      },
+      "raw": ""
+    },
+    {
+      "category": "Logs",
+      "title": "System Log Excerpts",
+      "source": "/var/log / journalctl / wevtutil",
+      "timestamp": "2026-05-31T01:21:16.175702Z",
+      "data": {
+        "/var/log/dpkg.log": "2026-04-18 18:12:25 status half-configured libsecret-common:all 0.21.4-1build3\n2026-04-18 18:12:25 status installed libsecret-common:all 0.21.4-1build3\n2026-04-18 18:12:25 configure libgraphene-1.0-0:amd64 1.10.8-3build2 <none>\n2026-04-18 18:12:25 status unpacked libgraphene-1.0-0:amd64 1.10.8-3build2\n2026-04-18 18:12:25 status half-configured libgraphene-1.0-0:amd64 1.10.8-3build2\n2026-04-18 18:12:25 status installed libgraphene-1.0-0:amd64 1.10.8-3build2\n2026-04-18 18:12:25 configure libfluidsynth3:amd64 2.3.4-1build3 <none>\n2026-04-18 18:12:25 status unpacked libfluidsynth3:amd64 2.3.4-1build3\n2026-04-18 18:12:25 status half-configured libfluidsynth3:amd64 2.3.4-1build3\n2026-04-18 18:12:25 status installed libfluidsynth3:amd64 2.3.4-1build3\n2026-04-18 18:12:25 configure libdvdnav4:amd64 6.1.1-3build1 <none>\n2026-04-18 18:12:25 status unpacked libdvdnav4:amd64 6.1.1-3build1\n2026-04-18 18:12:25 status half-configured libdvdnav4:amd64 6.1.1-3build1\n2026-04-18 18:12:25 status installed libdvdnav4:amd64 6.1.1-3build1\n2026-04-18 18:12:25 configure fonts-unifont:all 1:15.1.01-1build1 <none>\n2026-04-18 18:12:25 status unpacked fonts-unifont:all 1:15.1.01-1build1\n2026-04-18 18:12:25 status half-configured fonts-unifont:all 1:15.1.01-1build1\n2026-04-18 18:12:25 status installed fonts-unifont:all 1:15.1.01-1build1\n2026-04-18 18:12:25 configure libaa1:amd64 1.4p5-51.1 <none>\n2026-04-18 18:12:25 status unpacked libaa1:amd64 1.4p5-51.1\n2026-04-18 18:12:25 status half-configured libaa1:amd64 1.4p5-51.1\n2026-04-18 18:12:25 status installed libaa1:amd64 1.4p5-51.1\n2026-04-18 18:12:25 configure glib-networking-services:amd64 2.80.0-1build1 <none>\n2026-04-18 18:12:25 status unpacked glib-networking-services:amd64 2.80.0-1build1\n2026-04-18 18:12:25 status half-configured glib-networking-services:amd64 2.80.0-1build1\n2026-04-18 18:12:25 status installed glib-networking-services:amd64 2.80.0-1build1\n2026-04-18 18:12:25 configure libavif16:amd64 1.0.4-1ubuntu3 <none>\n2026-04-18 18:12:25 status unpacked libavif16:amd64 1.0.4-1ubuntu3\n2026-04-18 18:12:25 status half-configured libavif16:amd64 1.0.4-1ubuntu3\n2026-04-18 18:12:25 status installed libavif16:amd64 1.0.4-1ubuntu3\n2026-04-18 18:12:25 configure libatk1.0-0t64:amd64 2.52.0-1build1 <none>\n2026-04-18 18:12:25 status unpacked libatk1.0-0t64:amd64 2.52.0-1build1\n2026-04-18 18:12:25 status half-configured libatk1.0-0t64:amd64 2.52.0-1build1\n2026-04-18 18:12:25 status installed libatk1.0-0t64:amd64 2.52.0-1build1\n2026-04-18 18:12:25 configure dictionaries-common:all 1.29.7 <none>\n2026-04-18 18:12:25 status unpacked dictionaries-common:all 1.29.7\n2026-04-18 18:12:25 status half-configured dictionaries-common:all 1.29.7\n2026-04-18 18:12:26 status installed dictionaries-common:all 1.29.7\n2026-04-18 18:12:26 status triggers-pending dictionaries-common:all 1.29.7\n2026-04-18 18:12:26 configure x11-xkb-utils:amd64 7.7+8build2 <none>\n2026-04-18 18:12:26 status unpacked x11-xkb-utils:amd64 7.7+8build2\n2026-04-18 18:12:26 status half-configured x11-xkb-utils:amd64 7.7+8build2\n2026-04-18 18:12:26 status installed x11-xkb-utils:amd64 7.7+8build2\n2026-04-18 18:12:26 configure libzbar0t64:amd64 0.23.93-4build3 <none>\n2026-04-18 18:12:26 status unpacked libzbar0t64:amd64 0.23.93-4build3\n2026-04-18 18:12:26 status half-configured libzbar0t64:amd64 0.23.93-4build3\n2026-04-18 18:12:26 status installed libzbar0t64:amd64 0.23.93-4build3\n2026-04-18 18:12:26 configure dconf-service:amd64 0.40.0-4ubuntu0.1 <none>\n2026-04-18 18:12:26 status unpacked dconf-service:amd64 0.40.0-4ubuntu0.1\n2026-04-18 18:12:26 status half-configured dconf-service:amd64 0.40.0-4ubuntu0.1\n2026-04-18 18:12:26 status installed dconf-service:amd64 0.40.0-4ubuntu0.1\n2026-04-18 18:12:26 configure xfonts-utils:amd64 1:7.7+6build3 <none>\n2026-04-18 18:12:26 status unpacked xfonts-utils:amd64 1:7.7+6build3\n2026-04-18 18:12:26 status half-configured xfonts-utils:amd64 1:7.7+6build3\n2026-04-18 18:12:26 status installed xfonts-utils:amd64 1:7.7+6build3\n2026-04-18 18:12:26 configure libjson-glib-1.0-0:amd64 1.8.0-2build2 <none>\n2026-04-18 18:12:26 status unpacked libjson-glib-1.0-0:amd64 1.8.0-2build2\n2026-04-18 18:12:26 status half-configured libjson-glib-1.0-0:amd64 1.8.0-2build2\n2026-04-18 18:12:26 status installed libjson-glib-1.0-0:amd64 1.8.0-2build2\n2026-04-18 18:12:26 configure libsecret-1-0:amd64 0.21.4-1build3 <none>\n2026-04-18 18:12:26 status unpacked libsecret-1-0:amd64 0.21.4-1build3\n2026-04-18 18:12:26 status half-configured libsecret-1-0:amd64 0.21.4-1build3\n2026-04-18 18:12:26 status installed libsecret-1-0:amd64 0.21.4-1build3\n2026-04-18 18:12:26 configure libopenexr-3-1-30:amd64 3.1.5-5.1build3 <none>\n2026-04-18 18:12:26 status unpacked libopenexr-3-1-30:amd64 3.1.5-5.1build3\n2026-04-18 18:12:26 status half-configured libopenexr-3-1-30:amd64 3.1.5-5.1build3\n2026-04-18 18:12:26 status installed libopenexr-3-1-30:amd64 3.1.5-5.1build3\n2026-04-18 18:12:26 configure xauth:amd64 1:1.1.2-1build1 <none>\n2026-04-18 18:12:26 status unpacked xauth:amd64 1:1.1.2-1build1\n2026-04-18 18:12:26 status half-configured xauth:amd64 1:1.1.2-1build1\n2026-04-18 18:12:26 status installed xauth:amd64 1:1.1.2-1build1\n2026-04-18 18:12:26 configure xfonts-cyrillic:all 1:1.0.5+nmu1 <none>\n2026-04-18 18:12:26 status unpacked xfonts-cyrillic:all 1:1.0.5+nmu1\n2026-04-18 18:12:26 status half-configured xfonts-cyrillic:all 1:1.0.5+nmu1\n2026-04-18 18:12:26 status installed xfonts-cyrillic:all 1:1.0.5+nmu1\n2026-04-18 18:12:26 configure hunspell-en-us:all 1:2020.12.07-2 <none>\n2026-04-18 18:12:26 status unpacked hunspell-en-us:all 1:2020.12.07-2\n2026-04-18 18:12:26 status half-configured hunspell-en-us:all 1:2020.12.07-2\n2026-04-18 18:12:26 status installed hunspell-en-us:all 1:2020.12.07-2\n2026-04-18 18:12:26 configure xserver-common:all 2:21.1.12-1ubuntu1.5 <none>\n2026-04-18 18:12:26 status unpacked xserver-common:all 2:21.1.12-1ubuntu1.5\n2026-04-18 18:12:26 status half-configured xserver-common:all 2:21.1.12-1ubuntu1.5\n2026-04-18 18:12:26 status installed xserver-common:all 2:21.1.12-1ubuntu1.5\n2026-04-18 18:12:26 configure xfonts-scalable:all 1:1.0.3-1.3 <none>\n2026-04-18 18:12:26 status unpacked xfonts-scalable:all 1:1.0.3-1.3\n2026-04-18 18:12:26 status half-configured xfonts-scalable:all 1:1.0.3-1.3\n2026-04-18 18:12:26 status installed xfonts-scalable:all 1:1.0.3-1.3\n2026-04-18 18:12:26 configure libatk-bridge2.0-0t64:amd64 2.52.0-1build1 <none>\n2026-04-18 18:12:26 status unpacked libatk-bridge2.0-0t64:amd64 2.52.0-1build1\n2026-04-18 18:12:26 status half-configured libatk-bridge2.0-0t64:amd64 2.52.0-1build1\n2026-04-18 18:12:26 status installed libatk-bridge2.0-0t64:amd64 2.52.0-1build1\n2026-04-18 18:12:26 configure dconf-gsettings-backend:amd64 0.40.0-4ubuntu0.1 <none>\n2026-04-18 18:12:26 status unpacked dconf-gsettings-backend:amd64 0.40.0-4ubuntu0.1\n2026-04-18 18:12:26 status half-configured dconf-gsettings-backend:amd64 0.40.0-4ubuntu0.1\n2026-04-18 18:12:26 status installed dconf-gsettings-backend:amd64 0.40.0-4ubuntu0.1\n2026-04-18 18:12:26 configure libenchant-2-2:amd64 2.3.3-2build2 <none>\n2026-04-18 18:12:26 status unpacked libenchant-2-2:amd64 2.3.3-2build2\n2026-04-18 18:12:26 status half-configured libenchant-2-2:amd64 2.3.3-2build2\n2026-04-18 18:12:26 status installed libenchant-2-2:amd64 2.3.3-2build2\n2026-04-18 18:12:26 configure xvfb:amd64 2:21.1.12-1ubuntu1.5 <none>\n2026-04-18 18:12:26 status unpacked xvfb:amd64 2:21.1.12-1ubuntu1.5\n2026-04-18 18:12:26 status half-configured xvfb:amd64 2:21.1.12-1ubuntu1.5\n2026-04-18 18:12:26 status installed xvfb:amd64 2:21.1.12-1ubuntu1.5\n2026-04-18 18:12:26 configure libgtk-4-common:all 4.14.5+ds-0ubuntu0.9 <none>\n2026-04-18 18:12:26 status unpacked libgtk-4-common:all 4.14.5+ds-0ubuntu0.9\n2026-04-18 18:12:26 status half-configured libgtk-4-common:all 4.14.5+ds-0ubuntu0.9\n2026-04-18 18:12:26 status triggers-awaited libgtk-4-common:all 4.14.5+ds-0ubuntu0.9\n2026-04-18 18:12:26 configure libgtk-3-common:all 3.24.41-4ubuntu1.3 <none>\n2026-04-18 18:12:26 status unpacked libgtk-3-common:all 3.24.41-4ubuntu1.3\n2026-04-18 18:12:26 status half-configured libgtk-3-common:all 3.24.41-4ubuntu1.3\n2026-04-18 18:12:26 status triggers-awaited libgtk-3-common:all 3.24.41-4ubuntu1.3\n2026-04-18 18:12:26 configure gsettings-desktop-schemas:all 46.1-0ubuntu1 <none>\n2026-04-18 18:12:26 status unpacked gsettings-desktop-schemas:all 46.1-0ubuntu1\n2026-04-18 18:12:26 status half-configured gsettings-desktop-schemas:all 46.1-0ubuntu1\n2026-04-18 18:12:26 status triggers-awaited gsettings-desktop-schemas:all 46.1-0ubuntu1\n2026-04-18 18:12:26 configure humanity-icon-theme:all 0.6.16 <none>\n2026-04-18 18:12:26 status unpacked humanity-icon-theme:all 0.6.16\n2026-04-18 18:12:26 status half-configured humanity-icon-theme:all 0.6.16\n2026-04-18 18:12:26 status installed humanity-icon-theme:all 0.6.16\n2026-04-18 18:12:26 configure ubuntu-mono:all 24.04-0ubuntu1 <none>\n2026-04-18 18:12:26 status unpacked ubuntu-mono:all 24.04-0ubuntu1\n2026-04-18 18:12:26 status half-configured ubuntu-mono:all 24.04-0ubuntu1\n2026-04-18 18:12:26 status installed ubuntu-mono:all 24.04-0ubuntu1\n2026-04-18 18:12:26 configure adwaita-icon-theme:all 46.0-1 <none>\n2026-04-18 18:12:26 status unpacked adwaita-icon-theme:all 46.0-1\n2026-04-18 18:12:26 status half-configured adwaita-icon-theme:all 46.0-1\n2026-04-18 18:12:26 status installed adwaita-icon-theme:all 46.0-1\n2026-04-18 18:12:26 trigproc fontconfig:amd64 2.15.0-1.1ubuntu2 <none>\n2026-04-18 18:12:26 status half-configured fontconfig:amd64 2.15.0-1.1ubuntu2\n2026-04-18 18:12:26 status installed fontconfig:amd64 2.15.0-1.1ubuntu2\n2026-04-18 18:12:26 trigproc libc-bin:amd64 2.39-0ubuntu8.7 <none>\n2026-04-18 18:12:26 status half-configured libc-bin:amd64 2.39-0ubuntu8.7\n2026-04-18 18:12:26 status installed libc-bin:amd64 2.39-0ubuntu8.7\n2026-04-18 18:12:26 trigproc libglib2.0-0t64:amd64 2.80.0-6ubuntu3.8 <none>\n2026-04-18 18:12:26 status half-configured libglib2.0-0t64:amd64 2.80.0-6ubuntu3.8\n2026-04-18 18:12:26 status installed libgtk-4-common:all 4.14.5+ds-0ubuntu0.9\n2026-04-18 18:12:26 status installed libgtk-3-common:all 3.24.41-4ubuntu1.3\n2026-04-18 18:12:26 status installed gsettings-desktop-schemas:all 46.1-0ubuntu1\n2026-04-18 18:12:26 status installed libglib2.0-0t64:amd64 2.80.0-6ubuntu3.8\n2026-04-18 18:12:26 configure libgtk-3-0t64:amd64 3.24.41-4ubuntu1.3 <none>\n2026-04-18 18:12:26 status triggers-pending libc-bin:amd64 2.39-0ubuntu8.7\n2026-04-18 18:12:26 status unpacked libgtk-3-0t64:amd64 3.24.41-4ubuntu1.3\n2026-04-18 18:12:26 status half-configured libgtk-3-0t64:amd64 3.24.41-4ubuntu1.3\n2026-04-18 18:12:26 status installed libgtk-3-0t64:amd64 3.24.41-4ubuntu1.3\n2026-04-18 18:12:26 configure libgtk-4-1:amd64 4.14.5+ds-0ubuntu0.9 <none>\n2026-04-18 18:12:26 status unpacked libgtk-4-1:amd64 4.14.5+ds-0ubuntu0.9\n2026-04-18 18:12:26 status half-configured libgtk-4-1:amd64 4.14.5+ds-0ubuntu0.9\n2026-04-18 18:12:26 status installed libgtk-4-1:amd64 4.14.5+ds-0ubuntu0.9\n2026-04-18 18:12:26 configure glib-networking:amd64 2.80.0-1build1 <none>\n2026-04-18 18:12:26 status unpacked glib-networking:amd64 2.80.0-1build1\n2026-04-18 18:12:26 status half-configured glib-networking:amd64 2.80.0-1build1\n2026-04-18 18:12:26 status installed glib-networking:amd64 2.80.0-1build1\n2026-04-18 18:12:26 configure libsoup-3.0-0:amd64 3.4.4-5ubuntu0.7 <none>\n2026-04-18 18:12:26 status unpacked libsoup-3.0-0:amd64 3.4.4-5ubuntu0.7\n2026-04-18 18:12:26 status half-configured libsoup-3.0-0:amd64 3.4.4-5ubuntu0.7\n2026-04-18 18:12:26 status installed libsoup-3.0-0:amd64 3.4.4-5ubuntu0.7\n2026-04-18 18:12:26 configure libgssdp-1.6-0:amd64 1.6.3-1build3 <none>\n2026-04-18 18:12:26 status unpacked libgssdp-1.6-0:amd64 1.6.3-1build3\n2026-04-18 18:12:26 status half-configured libgssdp-1.6-0:amd64 1.6.3-1build3\n2026-04-18 18:12:26 status installed libgssdp-1.6-0:amd64 1.6.3-1build3\n2026-04-18 18:12:26 configure gstreamer1.0-plugins-good:amd64 1.24.2-1ubuntu1.3 <none>\n2026-04-18 18:12:26 status unpacked gstreamer1.0-plugins-good:amd64 1.24.2-1ubuntu1.3\n2026-04-18 18:12:26 status half-configured gstreamer1.0-plugins-good:amd64 1.24.2-1ubuntu1.3\n2026-04-18 18:12:26 status installed gstreamer1.0-plugins-good:amd64 1.24.2-1ubuntu1.3\n2026-04-18 18:12:26 configure libgupnp-1.6-0:amd64 1.6.6-1build3 <none>\n2026-04-18 18:12:26 status unpacked libgupnp-1.6-0:amd64 1.6.6-1build3\n2026-04-18 18:12:26 status half-configured libgupnp-1.6-0:amd64 1.6.6-1build3\n2026-04-18 18:12:26 status installed libgupnp-1.6-0:amd64 1.6.6-1build3\n2026-04-18 18:12:26 configure libgupnp-igd-1.6-0:amd64 1.6.0-3build3 <none>\n2026-04-18 18:12:26 status unpacked libgupnp-igd-1.6-0:amd64 1.6.0-3build3\n2026-04-18 18:12:26 status half-configured libgupnp-igd-1.6-0:amd64 1.6.0-3build3\n2026-04-18 18:12:26 status installed libgupnp-igd-1.6-0:amd64 1.6.0-3build3\n2026-04-18 18:12:26 configure libnice10:amd64 0.1.21-2build3 <none>\n2026-04-18 18:12:26 status unpacked libnice10:amd64 0.1.21-2build3\n2026-04-18 18:12:26 status half-configured libnice10:amd64 0.1.21-2build3\n2026-04-18 18:12:26 status installed libnice10:amd64 0.1.21-2build3\n2026-04-18 18:12:26 configure libgstreamer-plugins-bad1.0-0:amd64 1.24.2-1ubuntu4 <none>\n2026-04-18 18:12:26 status unpacked libgstreamer-plugins-bad1.0-0:amd64 1.24.2-1ubuntu4\n2026-04-18 18:12:26 status half-configured libgstreamer-plugins-bad1.0-0:amd64 1.24.2-1ubuntu4\n2026-04-18 18:12:26 status installed libgstreamer-plugins-bad1.0-0:amd64 1.24.2-1ubuntu4\n2026-04-18 18:12:26 configure gstreamer1.0-plugins-bad:amd64 1.24.2-1ubuntu4 <none>\n2026-04-18 18:12:26 status unpacked gstreamer1.0-plugins-bad:amd64 1.24.2-1ubuntu4\n2026-04-18 18:12:26 status half-configured gstreamer1.0-plugins-bad:amd64 1.24.2-1ubuntu4\n2026-04-18 18:12:26 status installed gstreamer1.0-plugins-bad:amd64 1.24.2-1ubuntu4\n2026-04-18 18:12:26 trigproc dictionaries-common:all 1.29.7 <none>\n2026-04-18 18:12:26 status half-configured dictionaries-common:all 1.29.7\n2026-04-18 18:12:26 status installed dictionaries-common:all 1.29.7\n2026-04-18 18:12:26 trigproc libc-bin:amd64 2.39-0ubuntu8.7 <none>\n2026-04-18 18:12:26 status half-configured libc-bin:amd64 2.39-0ubuntu8.7\n2026-04-18 18:12:26 status installed libc-bin:amd64 2.39-0ubuntu8.7\n2026-04-18 18:13:00 status triggers-pending ca-certificates-java:all 20240118\n2026-04-18 18:13:00 startup packages triggers-only\n2026-04-18 18:13:00 trigproc ca-certificates-java:all 20240118 <none>\n2026-04-18 18:13:00 status half-configured ca-certificates-java:all 20240118\n2026-04-18 18:13:00 status installed ca-certificates-java:all 20240118\n2026-04-18 18:13:02 status triggers-pending ca-certificates-java:all 20240118\n2026-04-18 18:13:02 startup packages triggers-only\n2026-04-18 18:13:02 trigproc ca-certificates-java:all 20240118 <none>\n2026-04-18 18:13:02 status half-configured ca-certificates-java:all 20240118\n2026-04-18 18:13:02 status installed ca-certificates-java:all 20240118\n",
+        "journalctl_warnings": "-- No entries --\n"
+      },
+      "raw": ""
+    },
+    {
+      "category": "Filesystem",
+      "title": "Open File Handles",
+      "source": "lsof / handle.exe",
+      "timestamp": "2026-05-31T01:21:16.176273Z",
+      "data": {
+        "raw_output": "lsof error: Command not found: lsof"
+      },
+      "raw": ""
+    }
+  ]
+}
