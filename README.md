@@ -142,7 +142,7 @@ No other dependencies. All core functionality uses standard library modules (`os
 ### 1 — Clone or download
 
 ```bash
-git clone https://github.com/yourorg/forensickit.git
+git clone https://github.com/thebige401/Eli_Willie_CYBR250_Final_Project.git
 cd forensickit
 ```
 
