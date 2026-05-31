@@ -7,8 +7,7 @@
 [![Tests: 79 passed](https://img.shields.io/badge/tests-79%20passed-brightgreen)](#running-the-test-suite)
 
 **Author:** Eli Willie  
-**CYBR 250 - Final Project**
-**May 30, 2026**
+**Course Final Project**
 
 ---
 
@@ -142,7 +141,7 @@ No other dependencies. All core functionality uses standard library modules (`os
 ### 1 — Clone or download
 
 ```bash
-git clone https://github.com/thebige401/Eli_Willie_CYBR250_Final_Project.git
+git clone https://github.com/thebige401/Eli_Willie_CYBR250_Final_Project.git forensickit
 cd forensickit
 ```
 
