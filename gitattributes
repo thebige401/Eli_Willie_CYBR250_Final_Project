@@ -1,0 +1,11 @@
+# ForensicKit - .gitattributes
+# Normalize line endings so the repo is consistent regardless of OS.
+# Git will store LF in the repo and convert to CRLF on Windows checkouts.
+
+* text=auto
+
+*.py    text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.json  text eol=lf
+*.html  text eol=lf

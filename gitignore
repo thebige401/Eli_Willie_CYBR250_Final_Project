@@ -1,0 +1,28 @@
+# ForensicKit - .gitignore
+# Author: Eli Willie | CYBR 250 - Final Project
+
+
+# ----------------------------
+# Python
+# ----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# ----------------------------
+# Virtual environments
+# ----------------------------
+.venv/
+venv/
+env/
+
+# ----------------------------
+# OS clutter
+# ----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
