@@ -145,7 +145,7 @@ git clone https://github.com/thebige401/Eli_Willie_CYBR250_Final_Project.git for
 cd forensickit
 ```
 
-Or just download `forensic_collector.py` as a standalone file if you do not need the full repo.
+Or just download `forensic_collector.py` as a standalone file if you don't need the full repo.
 
 ### 2 — Install the optional dependency
 
@@ -504,4 +504,4 @@ of this software ... (standard MIT text)
 
 ---
 
-*ForensicKit is provided for lawful digital forensic investigation and educational purposes. Always obtain proper legal authority before collecting evidence from any system you do not own.*
+*ForensicKit is provided for lawful digital forensic investigation and educational purposes. Always obtain proper legal authority before collecting evidence from any system you don't own.*
